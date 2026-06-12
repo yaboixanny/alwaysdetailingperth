@@ -386,6 +386,12 @@ select {
     gap: 20px;
 }
 
+.gallery-grid > *,
+.review-placeholder-grid > * {
+    min-width: 0;
+    width: 100%;
+}
+
 .packages-grid {
     align-items: start;
 }
@@ -455,6 +461,37 @@ select {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
+}
+
+.gallery-card,
+.review-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    background: var(--white);
+}
+
+.gallery-card {
+    min-height: 300px;
+}
+
+.gallery-image,
+.review-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.gallery-image {
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+}
+
+.review-image {
+    height: auto;
 }
 
 .placeholder-card,
@@ -685,6 +722,15 @@ select {
         font-size: 2.6rem;
     }
 
+    .hero-text {
+        display: none;
+    }
+
+    .check-list {
+        margin: 20px 0;
+        gap: 10px;
+    }
+
     .header-row {
         gap: 12px;
         align-items: center;
@@ -692,16 +738,21 @@ select {
     }
 
     .phone-pill {
-        padding: 9px 12px;
-        font-size: 0.82rem;
+        padding: 10px 14px;
+        font-size: 0.84rem;
         white-space: nowrap;
         flex-shrink: 1;
         min-width: 0;
+        gap: 6px;
     }
 
     .phone-pill span {
-        overflow: hidden;
-        text-overflow: ellipsis;
+        overflow: visible;
+        text-overflow: clip;
+    }
+
+    .phone-pill-icon {
+        margin-right: 0;
     }
 
     .cta-row {
