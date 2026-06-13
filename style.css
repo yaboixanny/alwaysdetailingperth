@@ -642,12 +642,13 @@ select {
 }
 
 .mobile-call-btn {
-    gap: 0;
+    gap: 8px;
     animation: mobile-call-float 4s ease-in-out infinite;
+    white-space: nowrap;
 }
 
 .mobile-call-btn .phone-pill-icon {
-    margin-right: 12px;
+    margin-right: 0;
     flex-shrink: 0;
     animation: phone-wiggle 3.2s ease-in-out infinite;
 }
@@ -781,6 +782,8 @@ select {
     .mobile-cta .btn {
         width: auto;
         min-width: 0;
+        padding: 12px 18px;
+        font-size: 0.95rem;
         box-shadow: 0 16px 35px rgba(0, 0, 0, 0.34);
     }
 
