@@ -313,6 +313,12 @@ a {
     scroll-margin-top: 100px;
 }
 
+@media (min-width: 901px) {
+    .hero .quote-card {
+        margin-top: 28px;
+    }
+}
+
 .quote-form {
     display: grid;
     gap: 12px;
@@ -756,6 +762,10 @@ select {
         margin-right: 0;
     }
 
+    .hero .cta-row .btn-primary {
+        gap: 10px;
+    }
+
     .cta-row {
         justify-content: center;
     }
@@ -777,6 +787,9 @@ select {
         border-top: 0;
         text-align: center;
         z-index: 30;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--transition), transform var(--transition);
     }
 
     .mobile-cta .btn {
@@ -785,6 +798,12 @@ select {
         padding: 12px 18px;
         font-size: 0.95rem;
         box-shadow: 0 16px 35px rgba(0, 0, 0, 0.34);
+    }
+
+    .mobile-cta.is-visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
     }
 
     .site-footer {
