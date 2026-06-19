@@ -119,6 +119,41 @@
             </div>
         </section>
 
+        <section class="section light-section">
+            <div class="container">
+                <div class="section-heading center showcase-heading">
+                    <h2>Check Out Some of Our Ceramic Coating in Perth</h2>
+                    <p>A look at the calibre of vehicles and finish standards we’re known for across Perth, from prestige cars to performance SUVs and utes.</p>
+                    <a href="tel:+61450784600" class="btn btn-primary section-quote-btn" onclick="gtag('event', 'conversion', {'send_to': 'AW-11109079339/YBRvCL_DhMIcEKuynLEp'});">Call 0450 784 600</a>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-card"><img src="ceramic2.webp" alt="White BYD after ceramic coating outside the Always Detailing workshop" class="gallery-image" style="object-position: center 35%;"></div>
+                    <div class="gallery-card"><img src="alwaysdetailing1.webp" alt="Grey Audi wagon detailed and coated by Always Detailing" class="gallery-image"></div>
+                    <div class="gallery-card"><img src="alwaysdetailing5.webp" alt="Grey Audi sedan with a freshly coated finish" class="gallery-image"></div>
+                    <div class="gallery-card"><img src="ceramic.webp" alt="White Toyota SUV with freshly coated paintwork in the Always Detailing studio" class="gallery-image" style="object-position: center 38%;"></div>
+                    <div class="gallery-card"><img src="ceramic3.webp" alt="Orange Mitsubishi ute after ceramic coating in the Always Detailing studio" class="gallery-image" style="object-position: center 42%;"></div>
+                    <div class="gallery-card"><img src="alwaysdetailing6.webp" alt="Blue Audi sedan with high-gloss ceramic coated paintwork" class="gallery-image"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section light-section">
+            <div class="container">
+                <div class="section-heading center showcase-heading">
+                    <h2>See What Our Clients Have To Say About Our Ceramic Coating In Perth</h2>
+                    <p>Real customer feedback from ceramic coating and detailing clients who trusted us with their vehicles.</p>
+                </div>
+                <div class="review-placeholder-grid">
+                    <div class="review-card"><img src="review-1.png" alt="Google review from Andrew Hayden" class="review-image"></div>
+                    <div class="review-card"><img src="review-2.png" alt="Google review from Clint Noordzy" class="review-image"></div>
+                    <div class="review-card"><img src="review-3.png" alt="Google review from Justin Wong" class="review-image"></div>
+                    <div class="review-card"><img src="review-4.png" alt="Google review from Zachary Loh" class="review-image"></div>
+                    <div class="review-card"><img src="review-5.png" alt="Google review from Rod" class="review-image"></div>
+                    <div class="review-card"><img src="review-6.png" alt="Google review from Amelia Forrest" class="review-image"></div>
+                </div>
+            </div>
+        </section>
+
         <section class="section">
             <div class="container">
                 <div class="section-heading center packages-heading">
@@ -176,41 +211,6 @@
                             <li>Strong value for long-term ownership</li>
                         </ul>
                     </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section light-section">
-            <div class="container">
-                <div class="section-heading center showcase-heading">
-                    <h2>Check Out Some of Our Ceramic Coating in Perth</h2>
-                    <p>A look at the calibre of vehicles and finish standards we’re known for across Perth, from prestige cars to performance SUVs and utes.</p>
-                    <a href="tel:+61450784600" class="btn btn-primary section-quote-btn" onclick="gtag('event', 'conversion', {'send_to': 'AW-11109079339/YBRvCL_DhMIcEKuynLEp'});">Call 0450 784 600</a>
-                </div>
-                <div class="gallery-grid">
-                    <div class="gallery-card"><img src="ceramic2.webp" alt="White BYD after ceramic coating outside the Always Detailing workshop" class="gallery-image" style="object-position: center 35%;"></div>
-                    <div class="gallery-card"><img src="alwaysdetailing1.webp" alt="Grey Audi wagon detailed and coated by Always Detailing" class="gallery-image"></div>
-                    <div class="gallery-card"><img src="alwaysdetailing5.webp" alt="Grey Audi sedan with a freshly coated finish" class="gallery-image"></div>
-                    <div class="gallery-card"><img src="ceramic.webp" alt="White Toyota SUV with freshly coated paintwork in the Always Detailing studio" class="gallery-image" style="object-position: center 38%;"></div>
-                    <div class="gallery-card"><img src="ceramic3.webp" alt="Orange Mitsubishi ute after ceramic coating in the Always Detailing studio" class="gallery-image" style="object-position: center 42%;"></div>
-                    <div class="gallery-card"><img src="alwaysdetailing6.webp" alt="Blue Audi sedan with high-gloss ceramic coated paintwork" class="gallery-image"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section light-section">
-            <div class="container">
-                <div class="section-heading center showcase-heading">
-                    <h2>See What Our Clients Have To Say About Our Ceramic Coating In Perth</h2>
-                    <p>Real customer feedback from ceramic coating and detailing clients who trusted us with their vehicles.</p>
-                </div>
-                <div class="review-placeholder-grid">
-                    <div class="review-card"><img src="review-1.png" alt="Google review from Andrew Hayden" class="review-image"></div>
-                    <div class="review-card"><img src="review-2.png" alt="Google review from Clint Noordzy" class="review-image"></div>
-                    <div class="review-card"><img src="review-3.png" alt="Google review from Justin Wong" class="review-image"></div>
-                    <div class="review-card"><img src="review-4.png" alt="Google review from Zachary Loh" class="review-image"></div>
-                    <div class="review-card"><img src="review-5.png" alt="Google review from Rod" class="review-image"></div>
-                    <div class="review-card"><img src="review-6.png" alt="Google review from Amelia Forrest" class="review-image"></div>
                 </div>
             </div>
         </section>
@@ -396,6 +396,12 @@
                         headers: { "Content-Type": "application/x-www-form-urlencoded" }
                     })
                     .then(() => {
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({
+                            event: "form_submit",
+                            form_name: form.getAttribute("name") || "",
+                            form_location: form.id || ""
+                        });
                         modal.style.display = "flex";
                         document.body.style.overflow = "hidden";
                         form.reset();

@@ -119,6 +119,40 @@
             </div>
         </section>
 
+        <section class="section light-section">
+            <div class="container">
+                <div class="section-heading center showcase-heading">
+                    <h2>Recent car detailing work from Always Detailing</h2>
+                    <p>A look at the calibre of vehicles and finish standards we’re known for across Perth, from prestige cars to performance SUVs and utes.</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-card"><img src="alwaysdetailing2.webp" alt="Blue McLaren detailed by Always Detailing" class="gallery-image"></div>
+                    <div class="gallery-card"><img src="alwaysdetailing1.webp" alt="Grey Audi wagon detailed by Always Detailing" class="gallery-image"></div>
+                    <div class="gallery-card"><img src="alwaysdetailing5.webp" alt="Grey Audi sedan after a professional detail" class="gallery-image"></div>
+                    <div class="gallery-card"><img src="alwaysdetailing3.webp" alt="Grey BMW SUV in the Always Detailing studio" class="gallery-image"></div>
+                    <div class="gallery-card"><img src="alwaysdetailing4.webp" alt="Grey Ford Raptor prepared at Always Detailing" class="gallery-image"></div>
+                    <div class="gallery-card"><img src="alwaysdetailing6.webp" alt="Blue Audi sedan with high-gloss paintwork after detailing" class="gallery-image"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section light-section">
+            <div class="container">
+                <div class="section-heading center showcase-heading">
+                    <h2>What Perth clients say about Always Detailing</h2>
+                    <p>Real customer feedback from detailing clients who trusted us with their vehicles.</p>
+                </div>
+                <div class="review-placeholder-grid">
+                    <div class="review-card"><img src="review-1.png" alt="Google review from Andrew Hayden" class="review-image"></div>
+                    <div class="review-card"><img src="review-2.png" alt="Google review from Clint Noordzy" class="review-image"></div>
+                    <div class="review-card"><img src="review-3.png" alt="Google review from Justin Wong" class="review-image"></div>
+                    <div class="review-card"><img src="review-4.png" alt="Google review from Zachary Loh" class="review-image"></div>
+                    <div class="review-card"><img src="review-5.png" alt="Google review from Rod" class="review-image"></div>
+                    <div class="review-card"><img src="review-6.png" alt="Google review from Amelia Forrest" class="review-image"></div>
+                </div>
+            </div>
+        </section>
+
         <section class="section">
             <div class="container">
                 <div class="section-heading center packages-heading">
@@ -176,40 +210,6 @@
                             <li>Door trims dressed</li>
                         </ul>
                     </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section light-section">
-            <div class="container">
-                <div class="section-heading center showcase-heading">
-                    <h2>Recent car detailing work from Always Detailing</h2>
-                    <p>A look at the calibre of vehicles and finish standards we’re known for across Perth, from prestige cars to performance SUVs and utes.</p>
-                </div>
-                <div class="gallery-grid">
-                    <div class="gallery-card"><img src="alwaysdetailing2.webp" alt="Blue McLaren detailed by Always Detailing" class="gallery-image"></div>
-                    <div class="gallery-card"><img src="alwaysdetailing1.webp" alt="Grey Audi wagon detailed by Always Detailing" class="gallery-image"></div>
-                    <div class="gallery-card"><img src="alwaysdetailing5.webp" alt="Grey Audi sedan after a professional detail" class="gallery-image"></div>
-                    <div class="gallery-card"><img src="alwaysdetailing3.webp" alt="Grey BMW SUV in the Always Detailing studio" class="gallery-image"></div>
-                    <div class="gallery-card"><img src="alwaysdetailing4.webp" alt="Grey Ford Raptor prepared at Always Detailing" class="gallery-image"></div>
-                    <div class="gallery-card"><img src="alwaysdetailing6.webp" alt="Blue Audi sedan with high-gloss paintwork after detailing" class="gallery-image"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section light-section">
-            <div class="container">
-                <div class="section-heading center showcase-heading">
-                    <h2>What Perth clients say about Always Detailing</h2>
-                    <p>Real customer feedback from detailing clients who trusted us with their vehicles.</p>
-                </div>
-                <div class="review-placeholder-grid">
-                    <div class="review-card"><img src="review-1.png" alt="Google review from Andrew Hayden" class="review-image"></div>
-                    <div class="review-card"><img src="review-2.png" alt="Google review from Clint Noordzy" class="review-image"></div>
-                    <div class="review-card"><img src="review-3.png" alt="Google review from Justin Wong" class="review-image"></div>
-                    <div class="review-card"><img src="review-4.png" alt="Google review from Zachary Loh" class="review-image"></div>
-                    <div class="review-card"><img src="review-5.png" alt="Google review from Rod" class="review-image"></div>
-                    <div class="review-card"><img src="review-6.png" alt="Google review from Amelia Forrest" class="review-image"></div>
                 </div>
             </div>
         </section>
@@ -396,6 +396,12 @@
                         headers: { "Content-Type": "application/x-www-form-urlencoded" }
                     })
                     .then(() => {
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({
+                            event: "form_submit",
+                            form_name: form.getAttribute("name") || "",
+                            form_location: form.id || ""
+                        });
                         modal.style.display = "flex";
                         document.body.style.overflow = "hidden";
                         form.reset();
