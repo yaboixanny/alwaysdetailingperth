@@ -278,6 +278,61 @@ a {
     font-weight: 600;
 }
 
+.hero-copy-spacious h1 {
+    margin-bottom: 24px;
+}
+
+.hero-copy-spacious .hero-text {
+    margin-bottom: 10px;
+}
+
+.hero-copy-spacious .check-list {
+    margin: 34px 0;
+}
+
+.hero-copy-spacious .cta-row {
+    margin-bottom: 30px;
+}
+
+.quote-copy-spacious .eyebrow {
+    margin-bottom: 12px;
+}
+
+.quote-copy-spacious h2 {
+    margin-bottom: 22px;
+}
+
+.quote-copy-spacious .section-copy {
+    margin-bottom: 12px;
+}
+
+.quote-copy-spacious .check-list {
+    margin: 34px 0;
+}
+
+.quote-copy-spacious .section-call-btn {
+    margin-top: 10px;
+}
+
+#hero-form-top h2 {
+    margin-bottom: 14px;
+}
+
+#hero-form-top p {
+    margin-bottom: 8px;
+}
+
+.quote-response-time {
+    margin: 8px 0 2px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--text);
+}
+
+#hero-form-top .btn-full {
+    font-size: 1.02rem;
+}
+
 .hero-location-icon {
     width: 18px;
     height: 18px;
@@ -383,6 +438,18 @@ select {
 
 .section-quote-btn {
     margin-top: 6px;
+}
+
+.showcase-mobile-call {
+    display: none;
+    margin-top: 18px;
+    gap: 10px;
+    color: var(--white);
+}
+
+.section-call-btn {
+    gap: 10px;
+    color: var(--white);
 }
 
 .review-placeholder-grid,
@@ -707,6 +774,10 @@ select {
     .footer-contact {
         justify-items: start;
     }
+
+    .package-mobile-first {
+        order: -1;
+    }
 }
 
 @media (max-width: 768px) {
@@ -730,7 +801,7 @@ select {
     }
 
     .hero-copy h1 {
-        font-size: 2.6rem;
+        font-size: 2.8rem;
     }
 
     .hero-text {
@@ -766,8 +837,23 @@ select {
         margin-right: 0;
     }
 
-    .hero .cta-row .btn-primary {
+    .hero .cta-row .phone-pill {
+        padding: 14px 20px;
+        font-size: 0.96rem;
+        min-width: 220px;
+        justify-content: center;
         gap: 10px;
+    }
+
+    .hero .cta-row .phone-pill span {
+        color: var(--white);
+    }
+
+    .hero .cta-row .phone-pill-icon {
+        width: 20px;
+        height: 20px;
+        color: var(--white);
+        animation: phone-wiggle 3.2s ease-in-out infinite;
     }
 
     .cta-row {
@@ -778,6 +864,10 @@ select {
         justify-content: center;
         text-align: center;
         width: 100%;
+    }
+
+    .quote-form .btn-full {
+        color: var(--white);
     }
 
     .mobile-cta {
@@ -808,6 +898,10 @@ select {
         opacity: 1;
         pointer-events: auto;
         transform: translateX(-50%) translateY(0);
+    }
+
+    .showcase-mobile-call {
+        display: inline-flex;
     }
 
     .site-footer {
